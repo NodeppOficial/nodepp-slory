@@ -1,6 +1,6 @@
-# NODEPP-NMAP
+# NODEPP-SLORY
 
-A DDoN Service Slowlory algorithm using Nodepp.
+A DDoN Service Slowloris algorithm using Nodepp.
 
 ## Dependencies
 
