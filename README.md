@@ -1,6 +1,6 @@
 # NODEPP-SLORY
 
-A DDoN Service Slowloris algorithm using Nodepp.
+A DDoS Service Slowloris algorithm using Nodepp.
 
 ## Dependencies
 
