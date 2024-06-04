@@ -130,7 +130,7 @@ public: slory_t () noexcept : obj( new slory_config_t() ){}
                  self->unpipe(); coEnd; }
                  x.fd.ssl = new ssl_t( obj->ctx, x.fd.get_fd() ); 
                  x.fd.ssl->set_hostname( self->obj->host );
-            if ( x.fd.ssl-connect() <= 0 ){ 
+            if ( x.fd.ssl->connect() <= 0 ){ 
                 _EERROR( self->onError, "Error while handshaking TLS" ); 
                  self->unpipe(); coEnd; } break;
             }    coNext;
