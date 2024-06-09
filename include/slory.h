@@ -168,5 +168,5 @@ namespace nodepp { namespace slory {
 
 /*────────────────────────────────────────────────────────────────────────────*/
 
-#undef PAylOAD
+#undef PAYlOAD
 #endif
