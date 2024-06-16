@@ -13,6 +13,7 @@ void onMain(){
     args.port     = 8000;
 
     auto slory = slory::tcp( args );
+    
     console::log("slowlory started");
 
     slory.onProgress([=]( uint a, uint b ){

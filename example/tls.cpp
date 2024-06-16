@@ -14,9 +14,9 @@ void onMain(){
     args.timeout  = 10000;
     args.maxconn  = 1000;
     args.port     = 8000;
-    args.ctx      = ssl;
 
-    auto slory = slory::tls( args );
+    auto slory = slory::tls( args, ssl );
+    
     console::log("slowlory started");
 
     slory.onProgress([=]( uint a, uint b ){
