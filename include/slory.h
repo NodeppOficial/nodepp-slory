@@ -53,20 +53,17 @@ public: slory_t () noexcept : obj( new slory_config_t() ){}
 
    ~slory_t () noexcept  { if( obj.count()> 1 ) { return; } free(); }
 
-    bool is_closed() const noexcept { 
-         return obj->state==0; 
-    }
+    bool is_closed() const noexcept { return obj->state<=0; }
 
     void close() const noexcept { free(); }
 
     void free() const noexcept { 
-        if( obj->state == 0 ){ return; }
-            obj->state =  0; 
-            onClose.emit();
+        if( obj->state ==-1 ){ return; }
+        obj->state = -1; onClose.emit();
     }
 
     void unpipe() const noexcept {
-         if( obj->state == 0 ){ return; }
+         if( obj->state <= 0 ){ return; }
          onDrain.emit(); obj->state = 0;
     }
 
