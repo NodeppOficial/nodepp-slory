@@ -3,10 +3,11 @@
 A DDoS Slowloris algorithm using Nodepp
 
 ## Dependencies
-
-- **Openssl**
-    - 🪟: `pacman -S mingw-w64-ucrt-x86_64-openssl`
-    - 🐧: `sudo apt install libssl-dev`
+```bash
+#Openssl
+    🪟: pacman -S mingw-w64-ucrt-x86_64-openssl
+    🐧: sudo apt install libssl-dev
+```
 
 # Usage
 
@@ -36,6 +37,7 @@ void onMain(){
 ```
 
 # Build & Run
-
-- 🪟: `g++ -o main main.cpp -I ./include -lssl -lcrypto -lws2_32 ; ./main`
-- 🐧: `g++ -o main main.cpp -I ./include -lssl -lcrypto ; ./main`
+```bash
+    🪟: g++ -o main main.cpp -I ./include -lssl -lcrypto -lws2_32 ; ./main
+    🐧: g++ -o main main.cpp -I ./include -lssl -lcrypto ; ./main
+```
